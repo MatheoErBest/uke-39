@@ -1,18 +1,16 @@
-import re
+import re   #importere re bibloteket
 
-hovedstader = ['oslo', 'copenhagen', 'goteborg']
+hovedstader = ['oslo', 'copenhagen', 'goteborg']    #lager en liste med hovedstadene i skandinavia
 
-brukerHovedstad = input('skriv en hovedstad i skandinavia')
+brukerHovedstad = input('skriv en hovedstad i skandinavia') #ber brukeren skrive en hovedstad fra skandinavia
 
-if brukerHovedstad.lower() == hovedstader:
-    print('riktig')
 
-for item in hovedstader:
+for item in hovedstader:    #sjekker om en av hovedstadene fra listen er svaret du ga
     if isinstance(item, str) and re.search(brukerHovedstad.lower(), item):
         print(brukerHovedstad + ' er en hovedstad i skandinavia, RIKTIG!')
         break
 
-    else:
+    else:   #om svaret ditt er ikke er i listen får du melding om det
         print(brukerHovedstad + ' er ikke en hovedstad i skandinavia, FEIL!')
         break
 

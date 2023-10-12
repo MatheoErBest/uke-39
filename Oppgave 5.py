@@ -1,6 +1,8 @@
 
-alder = float(input('hvor mange år er du'))
+alder = float(input('hvor mange år er du')) #ber brukeren om alderen deres
 
+
+#gir pris på billetten basert på alderen din 
 if alder <=9:
     print('billeten din er gratis')
 
